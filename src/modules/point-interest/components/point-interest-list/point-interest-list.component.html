@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="back-icon">
+    <a routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+      <p>Voltar</p>
+    </a>
+  </div>
+
+  <div class="table-result">
+    <mat-table [dataSource]="points" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+        <mat-cell *matCellDef="let point"> {{point.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="radius">
+        <mat-header-cell *matHeaderCellDef> Raio </mat-header-cell>
+        <mat-cell *matCellDef="let point"> {{point.radius}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="latitude">
+        <mat-header-cell *matHeaderCellDef> Latitude </mat-header-cell>
+        <mat-cell *matCellDef="let point"> {{point.latitude}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="longitude">
+        <mat-header-cell *matHeaderCellDef> Longitude </mat-header-cell>
+        <mat-cell *matCellDef="let point"> {{point.longitude}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

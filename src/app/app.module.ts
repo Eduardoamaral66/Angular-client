@@ -10,12 +10,14 @@ import { PoiTrackingComponent } from 'src/modules/tracking/components/poi-tracki
 import { PoiTrackingService } from 'src/modules/tracking/services/poi-tracking.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from 'src/modules/dashboard/components/dashboard/dashboard.component';
+import { PointInterestListComponent } from 'src/modules/point-interest/components/point-interest-list/point-interest-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PoiTrackingComponent,
-    DashboardComponent
+    DashboardComponent,
+    PointInterestListComponent,
   ],
   imports: [
     BrowserModule,

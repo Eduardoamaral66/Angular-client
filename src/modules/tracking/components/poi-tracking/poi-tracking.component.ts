@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { PoiTracking } from '../../models/poi-tracking';
 import { PoiTrackingService } from '../../services/poi-tracking.service';

@@ -1,0 +1,37 @@
+$primary: #11998e;
+$secondary: #11998e;
+$gray: #B3B3B3;
+$white: #fff;
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 1000px;
+  position: relative;
+}
+
+.table-result {
+  margin-top: 40px;
+}
+
+
+.back-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.back-icon a {
+  display: flex;
+  color: $white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.back-icon a p {
+  font-size: 23px;
+}
+
+.back-icon a mat-icon {
+  color: $gray;
+}
+
