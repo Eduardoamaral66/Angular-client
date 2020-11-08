@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { PoiTracking } from '../../models/poi-tracking';
 import { PoiTrackingService } from '../../services/poi-tracking.service';
 
@@ -30,7 +32,6 @@ export class PoiTrackingComponent implements OnInit {
 
   poiTrackingsSummedUp: PoiTrackingSummedUp[];
   displayedColumns: string[];
-
 
   constructor(private poiTrackingService: PoiTrackingService) {
     this.displayedColumns = ['licensePlate', 'poiName', 'time'];
@@ -84,6 +85,13 @@ export class PoiTrackingComponent implements OnInit {
         })
       }
     });
+  }
+
+  updateInitDate(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.filter.initDate = event.value;
+  }
+  updateEndDate(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.filter.endDate = event.value;
   }
 
   private formatTime(number): string {

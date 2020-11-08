@@ -33,9 +33,6 @@ $white: #fff;
   color: $gray;
 }
 
-mat-table {
-  width: 100%;
-}
 
 
 .form-fieldset {
@@ -48,6 +45,7 @@ mat-table {
 }
 
 .form-fieldset legend {
+  margin-left: 15px;
   background: $primary;
   padding: 6px;
   border-radius: 8px;
@@ -62,7 +60,7 @@ mat-table {
   bottom: 0;
 }
 
-button {
+.button-container button {
   color: $white;
   background-color: $primary;
 }
@@ -70,7 +68,6 @@ button {
 .form-group {
   display: flex;
 }
-
 
 .form-field {
   margin: 15px;
@@ -83,7 +80,9 @@ button {
 
 .form-field mat-form-field {
   margin-top: -20px;
+  width: 160px;
 }
+
 
 input,
 label {
@@ -91,6 +90,12 @@ label {
 }
 
 
+// OVERRIDE TABLE CSS
+mat-table {
+  width: 100%;
+}
+
+//OVERRIDE TAB CSS
 .mat-tab-label {
   min-width: 25px !important;
   padding: 5px;
@@ -100,4 +105,9 @@ label {
 
 .mat-ink-bar {
   background-color: $primary !important;
+}
+
+//OVERRIDE DATEPICKER CSS
+.mat-input-element {
+  caret-color: $white;
 }

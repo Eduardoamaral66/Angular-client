@@ -11,26 +11,30 @@
     <form (ngSubmit)="onSubmit()" #userForm="ngForm">
       <div class="form-group">
         <div class="form-field">
-          <label>License Plate</label>
+          <label>Placa</label>
           <input type="text" [(ngModel)]="filter.licensePlate" class="form-input" id="name" name="name" #name="ngModel">
         </div>
 
         <div class="form-field">
-          <label>Point of Interest</label>
+          <label>Ponto de interesse</label>
           <input type="text" [(ngModel)]="filter.poiName" class="form-input" id="name" name="name" #name="ngModel">
         </div>
 
         <div class="form-field">
-          <label>Start date</label>
-          <mat-form-field>
-            <input matInput type="datetime-local" class="form-input" [(ngModel)]="filter.initDate">
+          <label>Data inicial</label>
+          <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="startDate" (dateChange)="updateInitDate('change', $event)" >
+            <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+            <mat-datepicker #startDate></mat-datepicker>
           </mat-form-field>
         </div>
 
         <div class="form-field">
-          <label>End date</label>
-          <mat-form-field>
-            <input matInput type="datetime-local" class="form-input" [(ngModel)]="filter.endDate">
+          <label>Data final</label>
+          <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="endDate" (dateChange)="updateEndDate('change', $event)">
+            <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+            <mat-datepicker #endDate></mat-datepicker>
           </mat-form-field>
         </div>
 
@@ -47,18 +51,18 @@
         <mat-table [dataSource]="poiTrackingsSummedUp" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="licensePlate">
-            <mat-header-cell *matHeaderCellDef> License Plate </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Placa </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.licensePlate}} </mat-cell>
           </ng-container>
 
           <!-- Name Column -->
           <ng-container matColumnDef="poiName">
-            <mat-header-cell *matHeaderCellDef> Poi Name </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Ponto de Interesse </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.poiName}} </mat-cell>
           </ng-container>
 
           <ng-container matColumnDef="time">
-            <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Tempo Total </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.formatedTime}} </mat-cell>
           </ng-container>
 
@@ -70,30 +74,30 @@
         <mat-table [dataSource]="poiTrackings" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="licensePlate">
-            <mat-header-cell *matHeaderCellDef> License Plate </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Placa </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.licensePlate}} </mat-cell>
           </ng-container>
 
           <!-- Name Column -->
           <ng-container matColumnDef="poiName">
-            <mat-header-cell *matHeaderCellDef> Poi Name </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Ponto de Interesse </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.poiName}} </mat-cell>
           </ng-container>
 
           <!-- Weight Column -->
           <ng-container matColumnDef="firstDateTime">
-            <mat-header-cell *matHeaderCellDef> First Date/Time </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Primeira vez visto em </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.firstDate | date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
           </ng-container>
 
           <!-- Symbol Column -->
           <ng-container matColumnDef="lastDateTime">
-            <mat-header-cell *matHeaderCellDef> Last Date/Time </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Última vez visto em </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.lastDate  | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
           </ng-container>
 
           <ng-container matColumnDef="time">
-            <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> Tempo total </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.formatedTime}} </mat-cell>
           </ng-container>
 
