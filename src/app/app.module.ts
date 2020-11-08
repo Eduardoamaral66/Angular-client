@@ -11,6 +11,8 @@ import { PoiTrackingService } from 'src/modules/tracking/services/poi-tracking.s
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from 'src/modules/dashboard/components/dashboard/dashboard.component';
 import { PointInterestListComponent } from 'src/modules/point-interest/components/point-interest-list/point-interest-list.component';
+import { HistoryListComponent } from 'src/modules/history/components/history-list/history-list.component';
+import { YesNoPipe } from './shared/pipe/yes-no.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { PointInterestListComponent } from 'src/modules/point-interest/component
     PoiTrackingComponent,
     DashboardComponent,
     PointInterestListComponent,
+    HistoryListComponent,
+    YesNoPipe,
   ],
   imports: [
     BrowserModule,
