@@ -1,3 +1,8 @@
+$primary: #11998e;
+$secondary: #11998e;
+$gray: #B3B3B3;
+$white: #fff;
+
 .container {
   margin-top: 100px;
   margin-bottom: 80px;
@@ -15,7 +20,7 @@
 
 .back-icon a {
   display: flex;
-  color: #fff;
+  color: $white;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -24,6 +29,75 @@
   font-size: 23px;
 }
 
+.back-icon a mat-icon {
+  color: $gray;
+}
+
 mat-table {
   width: 100%;
+}
+
+
+.form-fieldset {
+  position: relative;
+  margin-top: 20px;
+  border: 2px solid $gray;
+  padding: 3px;
+  border-radius: 8px;
+  height: 130px;
+}
+
+.form-fieldset legend {
+  background: $primary;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+
+.button-container {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+button {
+  color: $white;
+  background-color: $primary;
+}
+
+.form-group {
+  display: flex;
+}
+
+
+.form-field {
+  margin: 15px;
+}
+
+.form-input {
+  border-radius: 8px;
+  height: 30px;
+}
+
+.form-field mat-form-field {
+  margin-top: -20px;
+}
+
+input,
+label {
+  display: block;
+}
+
+
+.mat-tab-label {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: $white;
+}
+
+.mat-ink-bar {
+  background-color: $primary !important;
 }
