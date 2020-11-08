@@ -14,28 +14,6 @@ $white: #fff;
   margin-top: 40px;
 }
 
-.back-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.back-icon a {
-  display: flex;
-  color: $white;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.back-icon a p {
-  font-size: 23px;
-}
-
-.back-icon a mat-icon {
-  color: $gray;
-}
-
-
-
 .form-fieldset {
   position: relative;
   margin-top: 20px;

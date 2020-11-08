@@ -13,6 +13,7 @@ import { DashboardComponent } from 'src/modules/dashboard/components/dashboard/d
 import { PointInterestListComponent } from 'src/modules/point-interest/components/point-interest-list/point-interest-list.component';
 import { HistoryListComponent } from 'src/modules/history/components/history-list/history-list.component';
 import { YesNoPipe } from './shared/pipe/yes-no.pipe';
+import { BackButtonComponent } from './shared/components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { YesNoPipe } from './shared/pipe/yes-no.pipe';
     PointInterestListComponent,
     HistoryListComponent,
     YesNoPipe,
+    BackButtonComponent,
   ],
   imports: [
     BrowserModule,
