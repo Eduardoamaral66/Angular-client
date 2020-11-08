@@ -8,31 +8,27 @@
 
   <div class="table-result">
     <mat-table [dataSource]="history" class="mat-elevation-z8">
-      <!-- Position Column -->
+
       <ng-container matColumnDef="licensePlate">
         <mat-header-cell *matHeaderCellDef> Placa </mat-header-cell>
         <mat-cell *matCellDef="let hist"> {{hist.licensePlate}} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="date">
         <mat-header-cell *matHeaderCellDef> Data/Hora </mat-header-cell>
         <mat-cell *matCellDef="let hist"> {{hist.date  | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="velocity">
         <mat-header-cell *matHeaderCellDef> Velocidade </mat-header-cell>
         <mat-cell *matCellDef="let hist"> {{hist.velocity}} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="latitude">
         <mat-header-cell *matHeaderCellDef> Latitude </mat-header-cell>
         <mat-cell *matCellDef="let hist"> {{hist.latitude}} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="longitude">
         <mat-header-cell *matHeaderCellDef> Longitude </mat-header-cell>
         <mat-cell *matCellDef="let hist"> {{hist.longitude}} </mat-cell>

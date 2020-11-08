@@ -49,13 +49,11 @@
     <mat-tab-group>
       <mat-tab label="Resumido">
         <mat-table [dataSource]="poiTrackingsSummedUp" class="mat-elevation-z8">
-          <!-- Position Column -->
           <ng-container matColumnDef="licensePlate">
             <mat-header-cell *matHeaderCellDef> Placa </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.licensePlate}} </mat-cell>
           </ng-container>
 
-          <!-- Name Column -->
           <ng-container matColumnDef="poiName">
             <mat-header-cell *matHeaderCellDef> Ponto de Interesse </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.poiName}} </mat-cell>
@@ -72,25 +70,21 @@
       </mat-tab>
       <mat-tab label="Detalhado">
         <mat-table [dataSource]="poiTrackings" class="mat-elevation-z8">
-          <!-- Position Column -->
           <ng-container matColumnDef="licensePlate">
             <mat-header-cell *matHeaderCellDef> Placa </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.licensePlate}} </mat-cell>
           </ng-container>
 
-          <!-- Name Column -->
           <ng-container matColumnDef="poiName">
             <mat-header-cell *matHeaderCellDef> Ponto de Interesse </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.poiName}} </mat-cell>
           </ng-container>
 
-          <!-- Weight Column -->
           <ng-container matColumnDef="firstDateTime">
             <mat-header-cell *matHeaderCellDef> Primeira vez visto em </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.firstDate | date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
           </ng-container>
 
-          <!-- Symbol Column -->
           <ng-container matColumnDef="lastDateTime">
             <mat-header-cell *matHeaderCellDef> Última vez visto em </mat-header-cell>
             <mat-cell *matCellDef="let track"> {{track.lastDate  | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
@@ -106,7 +100,6 @@
         </mat-table>
       </mat-tab>
     </mat-tab-group>
-
 
   </div>
 </div>
