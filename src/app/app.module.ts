@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PoiTrackingComponent } from 'src/modules/tracking/components/poi-tracking/poi-tracking.component';
+import { PoiTrackingService } from 'src/modules/tracking/services/poi-tracking.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from 'src/modules/dashboard/components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PoiTrackingComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -17,9 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PoiTrackingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

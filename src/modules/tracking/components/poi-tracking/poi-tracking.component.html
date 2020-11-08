@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="back-icon">
+    <a routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+      <p>Voltar</p>
+    </a>
+  </div>
+
+  <div class="table-result">
+    <mat-table [dataSource]="poiTrackings" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="licensePlate">
+        <mat-header-cell *matHeaderCellDef> License Plate </mat-header-cell>
+        <mat-cell *matCellDef="let track"> {{track.licensePlate}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="poiName">
+        <mat-header-cell *matHeaderCellDef> Poi Name </mat-header-cell>
+        <mat-cell *matCellDef="let track"> {{track.poiName}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="firstDateTime">
+        <mat-header-cell *matHeaderCellDef> First Date/Time </mat-header-cell>
+        <mat-cell *matCellDef="let track"> {{track.firstDate | date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="lastDateTime">
+        <mat-header-cell *matHeaderCellDef> Last Date/Time </mat-header-cell>
+        <mat-cell *matCellDef="let track"> {{track.lastDate  | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+        <mat-cell *matCellDef="let track"> {{track.formatedTime}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

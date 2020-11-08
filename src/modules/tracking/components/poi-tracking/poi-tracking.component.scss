@@ -1,0 +1,29 @@
+.container {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 1000px;
+  position: relative;
+}
+
+.table-result {
+  margin-top: 40px;
+}
+
+.back-icon {
+  vertical-align: middle;
+}
+
+.back-icon a {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.back-icon a p {
+  font-size: 23px;
+}
+
+mat-table {
+  width: 100%;
+}

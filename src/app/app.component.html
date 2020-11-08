@@ -1,59 +1,9 @@
 <mat-toolbar class="fixed-header">
   <span>
-    <img src="../assets/img/logo.mobi7.png" alt="Mobi 7 - Logo" class="logo">
+    <a routerLink="/">
+      <img src="../assets/img/logo.mobi7.png" alt="Mobi 7 - Logo" class="logo">
+    </a>
   </span>
 </mat-toolbar>
 
-<div class="container">
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <div class="icon">
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>
-    <div class="face face2">
-      <div class="content">
-        <h3>
-          <a href="#" target="_blank">Placeholder</a>
-        </h3>
-        <p>Lore Ipsum</p>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <div class="icon">
-          <i class="fa fa-twitter-square" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>
-    <div class="face face2">
-      <div class="content">
-        <h3>
-          <a href="#" target="_blank">Placeholder</a>
-        </h3>
-        <p>Lore Ipsum</p>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <div class="icon">
-          <i class="fa fa-github-square" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>
-    <div class="face face2">
-      <div class="content">
-        <h3>
-          <a href="#" target="_blank">Placeholder</a>
-        </h3>
-        <p>Lore Ipsum</p>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
